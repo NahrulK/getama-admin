@@ -7,7 +7,7 @@ export default function FeaturedInfo() {
       <div className="featuredItem">
         <span className="featuredTitle">Pendapatan</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">Rp. 5.000,00</span>
+          <span className="featuredMoney">Rp.5.000,00</span>
           <span className="featuredMoneyRate">
             -11.4 <ArrowDownward className="featuredIcon negative" />
           </span>
