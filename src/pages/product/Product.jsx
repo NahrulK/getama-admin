@@ -27,11 +27,11 @@ export default function Product() {
         <div className="productTopRight">
           <div className="productInfoTop">
             <img
-              src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="https://drive.google.com/uc?id=1YAWjnP64nnRO54MU8ypgzcBBgEXUo3Qh"
               alt=""
               className="productInfoImg"
             />
-            <span className="productName">Apple Airpods</span>
+            <span className="productName">Kalitemu Super</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
@@ -39,7 +39,7 @@ export default function Product() {
               <span className="productInfoValue">123</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">sales:</span>
+              <span className="productInfoKey">Penjualan:</span>
               <span className="productInfoValue">5123</span>
             </div>
             <div className="productInfoItem">
@@ -56,8 +56,8 @@ export default function Product() {
       <div className="productBottom">
         <form className="productForm">
           <div className="productFormLeft">
-            <label>Product Name</label>
-            <input type="text" placeholder="Apple AirPod" />
+            <label>Nama Produk</label>
+            <input type="text" placeholder="Kalitemu Super" />
             <label>In Stock</label>
             <select name="inStock" id="idStock">
               <option value="yes">Yes</option>
@@ -72,7 +72,7 @@ export default function Product() {
           <div className="productFormRight">
             <div className="productUpload">
               <img
-                src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src="https://drive.google.com/uc?id=1YAWjnP64nnRO54MU8ypgzcBBgEXUo3Qh"
                 alt=""
                 className="productUploadImg"
               />

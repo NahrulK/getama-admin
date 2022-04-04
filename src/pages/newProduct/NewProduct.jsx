@@ -3,18 +3,18 @@ import "./newProduct.css";
 export default function NewProduct() {
   return (
     <div className="newProduct">
-      <h1 className="addProductTitle">New Product</h1>
+      <h1 className="addProductTitle">Produk Baru</h1>
       <form className="addProductForm">
         <div className="addProductItem">
-          <label>Image</label>
+          <label>Gambar</label>
           <input type="file" id="file" />
         </div>
         <div className="addProductItem">
-          <label>Name</label>
-          <input type="text" placeholder="Apple Airpods" />
+          <label>Nama</label>
+          <input type="text" placeholder="Kalitemu Super" />
         </div>
         <div className="addProductItem">
-          <label>Stock</label>
+          <label>Stok</label>
           <input type="text" placeholder="123" />
         </div>
         <div className="addProductItem">
