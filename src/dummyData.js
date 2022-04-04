@@ -76,92 +76,42 @@ export const userData = [
 export const userRows = [
   {
     id: 1,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
+    username: "Raodatul Aini",
+    avatar: "https://drive.google.com/uc?id=1-QKAnXgL4WlM095s1U9zVhQ-X1PRCn8F",
+    email: "raodatul@gmail.com",
     status: "active",
-    transaction: "$120.00",
+    transaction: "Rp.9000000",
   },
   {
     id: 2,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
+    username: "Dewi Putri",
+    avatar: "https://drive.google.com/uc?id=1G9kuSb-wv5sRFa8UbYG96kop5TVR1lT_",
+    email: "alikanaila@yahoo.com",
     status: "active",
-    transaction: "$120.00",
+    transaction: "Rp.7000000",
   },
   {
     id: 3,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
+    username: "Emha Asqolani",
+    avatar: "https://drive.google.com/uc?id=1u1zwrG6PxI5O3JI3nIREYWvDgRoXcOlm",
+    email: "emha@drive.com",
     status: "active",
-    transaction: "$120.00",
+    transaction: "Rp.6000000",
   },
   {
     id: 4,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
+    username: "Ermawati Setia Ningsih",
+    avatar: "https://drive.google.com/uc?id=1pf_x1YkvjEEjW1vnsvfXVTg0eKpplEiM",
+    email: "emabahtiar@juju.com",
     status: "active",
-    transaction: "$120.00",
+    transaction: "Rp.8000000",
   },
   {
     id: 5,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
+    username: "M Rizal Umamy Fajri.S.Kom",
+    avatar: "https://drive.google.com/uc?id=1cpB8dykw6dA1dd7klkPt7yxlbGCO843-",
+    email: "umamyfajri@bilibili",
     status: "active",
-    transaction: "$120.00",
-  },
-  {
-    id: 6,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "$120.00",
-  },
-  {
-    id: 7,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "$120.00",
-  },
-  {
-    id: 8,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "$120.00",
-  },
-  {
-    id: 9,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "$120.00",
-  },
-  {
-    id: 10,
-    username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "$120.00",
+    transaction: "Rp.8564434",
   },
 ];
