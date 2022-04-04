@@ -28,7 +28,6 @@ export default function Chart({
           <Line type="monotone" dataKey={muteUser} stroke="#55ffbd" />
           <Tooltip />
           {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
-          <Legend />
         </LineChart>
       </ResponsiveContainer>
     </div>
