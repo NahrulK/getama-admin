@@ -1,10 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./product.css";
 import Chart from "../../components/chart/Chart";
 import { productData } from "../../dummyData";
 import { Publish } from "@material-ui/icons";
+import { useSelector } from "react-redux";
+import { useEffect, useMemo, useState } from "react";
+import { userRequest } from "../../requestMethods";
 
 export default function Product() {
+  const location = useLocation();
+  const productId = location.pathname.split("/")[2];
+  const [pStats, setPStats] = useState([]);
+
+  const MONTHS = useMemo(
+    () => [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Agu",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    []
+  );
+
+  useEffect(() => {
+    const getStats = async () => {
+      try {
+        // ?pid=" + productId
+        const res = await userRequest.get("orders/income");
+        console.log(res.data);
+        const list = res.data.sort((a, b) => {
+          return a._id - b._id;
+        });
+        list.map((item) =>
+          setPStats((prev) => [
+            ...prev,
+            { name: MONTHS[item._id - 1], Sales: item.total },
+          ])
+        );
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getStats();
+  }, [productId, MONTHS]);
+
+  const product = useSelector((state) =>
+    state.product.products.find((product) => product._id === productId)
+  );
+
+  // console.log(pStats);
+
   return (
     <div className="product">
       <div className="productTitleContainer">
@@ -16,7 +69,7 @@ export default function Product() {
       <div className="productTop">
         <div className="productTopLeft">
           <Chart
-            data={productData}
+            data={pStats}
             title="Aktivitas Penjualan"
             grid
             activeUser="Sales"
@@ -26,16 +79,12 @@ export default function Product() {
         </div>
         <div className="productTopRight">
           <div className="productInfoTop">
-            <img
-              src="https://drive.google.com/uc?id=1YAWjnP64nnRO54MU8ypgzcBBgEXUo3Qh"
-              alt=""
-              className="productInfoImg"
-            />
-            <span className="productName">Kalitemu Super</span>
+            <img src={product.img} alt="" className="productInfoImg" />
+            <span className="productName">{product.title}</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
-              <span className="productInfoKey">id:</span>
+              <span className="productInfoKey">id: {product._id}</span>
               <span className="productInfoValue">123</span>
             </div>
             <div className="productInfoItem">
@@ -48,7 +97,7 @@ export default function Product() {
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">in stock:</span>
-              <span className="productInfoValue">no</span>
+              <span className="productInfoValue">{product.inStock}</span>
             </div>
           </div>
         </div>
@@ -57,11 +106,15 @@ export default function Product() {
         <form className="productForm">
           <div className="productFormLeft">
             <label>Nama Produk</label>
-            <input type="text" placeholder="Kalitemu Super" />
+            <input type="text" placeholder={product.title} />
+            <label>Deskripsi Produk</label>
+            <input type="text" placeholder={product.desc}></input>
+            <label>Harga Produk</label>
+            <input type="text" placeholder={product.price} />
             <label>In Stock</label>
-            <select name="inStock" id="idStock">
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
+            <select name={product.inStock} id="idStock">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
             </select>
             <label>Active</label>
             <select name="active" id="active">
@@ -71,11 +124,7 @@ export default function Product() {
           </div>
           <div className="productFormRight">
             <div className="productUpload">
-              <img
-                src="https://drive.google.com/uc?id=1YAWjnP64nnRO54MU8ypgzcBBgEXUo3Qh"
-                alt=""
-                className="productUploadImg"
-              />
+              <img src={product.img} alt="" className="productUploadImg" />
               <label for="file">
                 <Publish />
               </label>
